@@ -42,8 +42,10 @@ class X11 {
   }
 
   async sendKey(windowId: number, char: string, logger: Logger): Promise<void> {
+    const delay = Math.ceil(Math.random() * 200 + 100);
+    await new Promise((r) => setTimeout(r, delay));
     const res = await exec(`xdotool key --window ${windowId} '${char}'`);
-    logger.info({ char, duration: res.duration }, 'x11:key:' + char);
+    logger.info({ char, duration: res.duration, delay }, 'x11:key:' + char);
   }
 }
 

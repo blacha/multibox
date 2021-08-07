@@ -1,24 +1,21 @@
+import { KeyF12 } from './key.code';
+
+import * as z from 'zod';
+import { TypeOf } from 'zod';
+import { char } from './key';
 export const Mapping = new Map<string, string>();
+export const Mouse = new Map<number, string>();
+
 export const Direct = new Set<string>();
 
 export const EnableDisable = '`';
 
-Direct.add('e');
-Direct.add('z');
-Direct.add('g');
-Direct.add('q');
-Direct.add('r');
+const zKeyCode = z.string().refine((f) => char(f));
 
-Direct.add('1');
-Direct.add('2');
+export const zConfigObject = z.object({
+  toggle: zKeyCode,
+  map: z.record(zKeyCode).transform((f) => new Map(Object.entries(f))),
+  mouse: z.record(zKeyCode).transform((f) => new Map(Object.entries(f))),
+});
 
-Mapping.set('f', 'f');
-Mapping.set('z', 'z');
-Mapping.set('t', 't');
-
-Mapping.set('1', '1');
-Mapping.set('2', '2');
-Mapping.set('3', '3');
-Mapping.set('4', '4');
-Mapping.set('5', '5');
-Mapping.set('6', '6');
+export type MultiConfig = TypeOf<typeof zConfigObject>;
