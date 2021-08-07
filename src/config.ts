@@ -1,8 +1,7 @@
-import { KeyF12 } from './key.code';
-
 import * as z from 'zod';
 import { TypeOf } from 'zod';
 import { char } from './key';
+
 export const Mapping = new Map<string, string>();
 export const Mouse = new Map<number, string>();
 

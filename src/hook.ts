@@ -2,7 +2,6 @@ import ioHook from 'iohook';
 import { Logger } from 'pino';
 import { MultiConfig } from './config';
 import * as K from './key';
-import { KeyC } from './key.code';
 import { x11 } from './x11';
 
 export interface KeyEvent {
