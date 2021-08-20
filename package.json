@@ -12,7 +12,7 @@
     "pino": "^6.11.3",
     "pretty-json-log": "^0.3.2",
     "typescript-memoize": "^1.0.1",
-    "zod": "^3.7.1"
+    "zod": "^3.7.3"
   },
   "devDependencies": {
     "@linzjs/style": "^3.0.0",
