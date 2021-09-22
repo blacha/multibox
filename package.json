@@ -15,7 +15,7 @@
     "zod": "^3.7.1"
   },
   "devDependencies": {
-    "@linzjs/style": "^3.0.0",
+    "@linzjs/style": "^3.2.0",
     "@types/pino": "^6.3.8"
   },
   "scripts": {
