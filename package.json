@@ -16,7 +16,7 @@
   },
   "devDependencies": {
     "@linzjs/style": "^3.0.0",
-    "@types/pino": "^6.3.8"
+    "@types/pino": "^6.3.12"
   },
   "scripts": {
     "build": "tsc",
